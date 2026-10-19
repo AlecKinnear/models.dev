@@ -1,11 +1,12 @@
 # Sources:
 # https://developers.openai.com/api/docs/models/gpt-audio-1.5
 # https://developers.openai.com/api/docs/pricing
+# No tools.updates: OpenAI's additional_tools items are Responses-only, and this model is Chat Completions only.
 schema = 2
 base_model = "openai/gpt-audio-1.5"
 
 [capabilities]
-tools = { supported = true, updates = true }
+tools = { supported = true }
 structured_output = false
 system_updates = true
 effort_updates = false
