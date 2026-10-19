@@ -1,6 +1,8 @@
 # Sources:
 # https://developers.openai.com/api/docs/models/gpt-transcribe
 # https://developers.openai.com/api/docs/changelog
+# Temperature: /v1/audio/transcriptions takes `temperature` (0-1); see CreateTranscriptionRequest in
+# https://github.com/openai/openai-openapi/blob/manual_spec/openapi.yaml. Live API accepts it for gpt-transcribe (2026-10-19).
 schema = 2
 type = "transcription"
 name = "GPT-Transcribe"
@@ -16,6 +18,7 @@ output = ["text"]
 [capabilities]
 tools = { supported = false }
 reasoning = { supported = false }
+temperature = true
 top_p = false
 top_k = false
 

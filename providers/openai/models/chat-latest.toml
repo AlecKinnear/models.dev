@@ -10,6 +10,7 @@ name = "Chat Latest"
 knowledge = "2026-04-20"
 
 [capabilities]
+tools = { supported = true, updates = true }
 reasoning = { supported = true }
 structured_output = true
 temperature = false

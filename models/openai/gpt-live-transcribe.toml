@@ -1,6 +1,8 @@
 # Sources:
 # https://developers.openai.com/api/docs/models/gpt-live-transcribe
 # https://developers.openai.com/api/docs/changelog
+# Temperature: realtime-only (no /v1/audio/transcriptions); the realtime transcription config has no
+# temperature field ("Unknown parameter: 'session.audio.input.transcription.temperature'", 2026-10-19).
 schema = 2
 type = "transcription"
 name = "GPT-Live-Transcribe"
@@ -16,6 +18,7 @@ output = ["text"]
 [capabilities]
 tools = { supported = false }
 reasoning = { supported = false }
+temperature = false
 top_p = false
 top_k = false
 

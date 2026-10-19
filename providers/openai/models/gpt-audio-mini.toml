@@ -7,7 +7,10 @@ base_model = "openai/gpt-audio-mini"
 status = "deprecated"
 
 [capabilities]
+tools = { supported = true, updates = true }
 structured_output = false
+system_updates = true
+effort_updates = false
 
 [cost.text.input]
 price = 0.6
