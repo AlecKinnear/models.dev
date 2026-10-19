@@ -9,5 +9,5 @@ status = "deprecated"
 [cost.text.input]
 price = 0.6
 
-[cost.text.output]
+[cost.audio.output]
 price = 12
