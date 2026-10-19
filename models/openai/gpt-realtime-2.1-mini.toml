@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini
 # https://developers.openai.com/api/docs/changelog
 schema = 2
+v2_only = true
 type = "realtime"
 name = "GPT-Realtime-2.1 Mini"
 description = "Distilled realtime reasoning model for faster, lower-cost voice interactions"

@@ -4,6 +4,7 @@
 # 200,000-token context and 100,000 max completion tokens from API errors; tools,
 # temperature, top_p and reasoning_effort are rejected; text-only input.
 schema = 2
+v2_only = true
 type = "chat"
 name = "GPT-5 Search API"
 description = "GPT-5 model trained for web search in the Chat Completions API"

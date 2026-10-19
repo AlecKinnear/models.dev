@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/gpt-audio-mini
 # https://developers.openai.com/api/docs/changelog
 schema = 2
+v2_only = true
 type = "chat"
 name = "GPT-Audio Mini"
 description = "Cost-efficient audio model for speech input and output with the Chat Completions API"

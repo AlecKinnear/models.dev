@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/tts-1-hd
 # https://openai.com/index/new-models-and-developer-products-announced-at-devday/
 schema = 2
+v2_only = true
 type = "speech"
 name = "TTS-1 HD"
 description = "Text-to-speech model optimized for audio quality"

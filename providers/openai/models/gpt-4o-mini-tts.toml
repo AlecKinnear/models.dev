@@ -3,6 +3,7 @@
 # https://developers.openai.com/api/docs/pricing
 # https://developers.openai.com/api/docs/deprecations
 schema = 2
+v2_only = true
 base_model = "openai/gpt-4o-mini-tts"
 status = "deprecated"
 

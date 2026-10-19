@@ -4,6 +4,7 @@
 # Temperature: /v1/audio/transcriptions takes `temperature` (0-1); see CreateTranscriptionRequest in
 # https://github.com/openai/openai-openapi/blob/manual_spec/openapi.yaml. Live API accepts it for gpt-transcribe (2026-10-19).
 schema = 2
+v2_only = true
 type = "transcription"
 name = "GPT-Transcribe"
 description = "High-accuracy speech-to-text model for audio files and committed Realtime turns"

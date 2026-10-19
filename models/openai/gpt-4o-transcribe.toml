@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/gpt-4o-transcribe
 # https://developers.openai.com/api/docs/changelog
 schema = 2
+v2_only = true
 type = "transcription"
 name = "GPT-4o Transcribe"
 description = "Speech-to-text model powered by GPT-4o for accurate transcription"

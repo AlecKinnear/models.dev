@@ -4,6 +4,7 @@
 # Temperature: realtime-only (no /v1/audio/transcriptions); the realtime transcription config has no
 # temperature field ("Unknown parameter: 'session.audio.input.transcription.temperature'", 2026-10-19).
 schema = 2
+v2_only = true
 type = "transcription"
 name = "GPT-Live-Transcribe"
 description = "Low-latency streaming speech-to-text model with keyword and language hints"

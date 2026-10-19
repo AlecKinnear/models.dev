@@ -711,6 +711,8 @@ export type LabCapabilitiesV2 = z.infer<typeof LabCapabilitiesV2>;
 // that hosts inherit through `base_model`.
 export const LabModelV2 = z
   .object({
+    // Published in the v2 API only; v1 output leaves the model out.
+    v2_only: z.boolean().optional(),
     id: z.string(),
     type: ModelTypeV2.optional(),
     name: z.string().min(1, "Model name cannot be empty"),
@@ -753,6 +755,8 @@ export type AuthoredApiEntryV2 = z.infer<typeof AuthoredApiEntryV2>;
 // full definition.
 export const AuthoredModelV2 = z
   .object({
+    // Published in the v2 API only; v1 output leaves the model out.
+    v2_only: z.boolean().optional(),
     id: z.string(),
     base_model: z.string().min(1, "Base model cannot be empty").optional(),
     base_model_omit: z.array(z.string()).optional(),

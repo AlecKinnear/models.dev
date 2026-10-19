@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/whisper-1
 # https://openai.com/index/introducing-chatgpt-and-whisper-apis/
 schema = 2
+v2_only = true
 type = "transcription"
 name = "Whisper"
 description = "General-purpose speech recognition model for transcription and translation"

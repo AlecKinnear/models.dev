@@ -27,12 +27,20 @@ export async function generateCatalog(directory: string) {
     path.join(directory, "providers"),
     models,
   );
+  // v2-only lab models stay available as base models but are left out of v1.
+  for (const id of v2OnlyModels.get(models) ?? []) delete models[id];
 
   return { models, providers };
 }
 
+// Lab model IDs marked `v2_only = true`, per generateModels result.
+const v2OnlyModels = new WeakMap<object, Set<string>>();
+
+// Every lab model, including v2-only ones (providers can still base_model them).
 export async function generateModels(directory: string) {
   const result: Record<string, ModelMetadata> = {};
+  const v2Only = new Set<string>();
+  v2OnlyModels.set(result, v2Only);
   if (!existsSync(directory)) return result;
 
   for await (const modelPath of new Bun.Glob("**/*.toml").scan({
@@ -47,6 +55,7 @@ export async function generateModels(directory: string) {
       },
     }).then((mod) => mod.default);
     toml.id = modelID;
+    if (isSchemaV2(toml) && toml.v2_only === true) v2Only.add(modelID);
 
     const model = ModelMetadata.safeParse(
       isSchemaV2(toml) ? labModelV2ToV1(toml, { modelPath }) : toml,
@@ -109,6 +118,8 @@ async function generateProviders(
         },
       }).then((mod) => mod.default);
       raw.id = modelID;
+      // Models marked `v2_only = true` are only published in the v2 API.
+      if (isSchemaV2(raw) && raw.v2_only === true) continue;
       const toml = isSchemaV2(raw) ? modelV2ToV1(raw, { modelPath }) : raw;
       if (toml.base_model !== undefined) {
         const baseModel = BaseModel.safeParse(toml);

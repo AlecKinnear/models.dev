@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/omni-moderation-latest
 # https://developers.openai.com/api/docs/changelog
 schema = 2
+v2_only = true
 name = "omni-moderation"
 description = "Moderation model that classifies potentially harmful content in text and images"
 open_weights = false

@@ -2,6 +2,7 @@
 # https://developers.openai.com/api/docs/models/gpt-realtime-2
 # https://developers.openai.com/api/docs/changelog
 schema = 2
+v2_only = true
 type = "realtime"
 name = "GPT-Realtime-2"
 description = "Realtime speech-to-speech model with configurable reasoning and reliable tool use for voice agents"
