@@ -5,6 +5,7 @@
 # - https://x.ai/news/grok-imagine-image-2
 # Pricing: $0.04 per image (not token-based; no [cost] authored)
 # Release: 2026-08-07 (GA as Quality Mode; API model id grok-imagine-image-2.0)
+# Context: GET https://api.x.ai/v1/image-generation-models reports max_prompt_length = 64000 (2026-10-19).
 schema = 2
 type = "image"
 name = "Grok Imagine Image 2.0"

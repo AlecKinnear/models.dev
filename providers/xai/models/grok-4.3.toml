@@ -5,6 +5,8 @@
 # - Caching (automatic prefix cache, prompt_cache_key): https://docs.x.ai/developers/advanced-api-usage/prompt-caching
 # - Priority (service_tier = priority, 2x): https://docs.x.ai/developers/advanced-api-usage/priority-processing
 # - API params (store, stream_options.include_usage, top_k): https://docs.x.ai/developers/rest-api-reference/inference/responses, https://docs.x.ai/developers/rest-api-reference/inference/chat-completions
+# Effort values: GET https://api.x.ai/v1/models lists capabilities.reasoning_effort = none, low, medium, high, xhigh (default low).
+# The API rejects values a model lacks (e.g. "none" on grok-4.5) and accepts each listed value (checked 2026-10-19).
 schema = 2
 name = "Grok 4.3"
 description = "xAI's Grok for chat, coding, agentic tools, and lower hallucination risk"

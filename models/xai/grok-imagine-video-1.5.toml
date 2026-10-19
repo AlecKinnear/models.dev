@@ -2,10 +2,14 @@
 # - https://docs.x.ai/docs/models
 # - https://docs.x.ai/developers/models/grok-imagine-video-1.5
 # - https://docs.x.ai/docs/guides/video-generation
+# Inputs: GET https://api.x.ai/v1/video-generation-models lists input_modalities = text, image, audio.
+# Video editing and extension use grok-imagine-video, not 1.5:
+# https://docs.x.ai/developers/model-capabilities/video/editing, https://docs.x.ai/developers/model-capabilities/video/extension
+# Voice references: https://docs.x.ai/developers/model-capabilities/video/reference-to-video
 schema = 2
 type = "video"
 name = "Grok Imagine Video 1.5"
-description = "Video model for image-to-video generation, editing, and extension workflows"
+description = "Video model for text-to-video, image-to-video, and reference-to-video generation with optional voice references"
 family = "grok"
 open_weights = false
 release_date = "2026-05-30"
