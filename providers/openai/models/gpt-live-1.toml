@@ -1,0 +1,9 @@
+# Sources:
+# https://developers.openai.com/api/docs/models/gpt-live-1
+# https://developers.openai.com/api/docs/pricing
+schema = 2
+base_model = "openai/gpt-live-1"
+
+[cost.audio.input]
+unit = "minute"
+price = 0.05

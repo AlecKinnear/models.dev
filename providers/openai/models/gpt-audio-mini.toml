@@ -1,0 +1,22 @@
+# Sources:
+# https://developers.openai.com/api/docs/models/gpt-audio-mini
+# https://developers.openai.com/api/docs/pricing
+# https://developers.openai.com/api/docs/deprecations
+schema = 2
+base_model = "openai/gpt-audio-mini"
+status = "deprecated"
+
+[capabilities]
+structured_output = false
+
+[cost.text.input]
+price = 0.6
+
+[cost.text.output]
+price = 2.4
+
+[cost.audio.input]
+price = 10
+
+[cost.audio.output]
+price = 20

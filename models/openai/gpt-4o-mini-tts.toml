@@ -1,0 +1,25 @@
+# Sources:
+# https://developers.openai.com/api/docs/models/gpt-4o-mini-tts
+# https://developers.openai.com/api/docs/changelog
+schema = 2
+type = "speech"
+name = "GPT-4o Mini TTS"
+description = "Text-to-speech model powered by GPT-4o Mini with steerable voice delivery"
+family = "gpt-mini"
+open_weights = false
+release_date = "2025-03-20"
+
+[modalities]
+input = ["text"]
+output = ["audio"]
+
+[capabilities]
+tools = { supported = false }
+reasoning = { supported = false }
+temperature = false
+top_p = false
+top_k = false
+
+[limit]
+context = 2_000
+output = 0

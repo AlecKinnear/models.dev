@@ -174,6 +174,10 @@ function costV2ToV1(cost: CostV2) {
   const output = cost.text?.output;
   // v1 prices are per text token, so media-only prices (per second, per image…) stay v2-only.
   if (input === undefined && output === undefined) return undefined;
+  // Text input with media-only output (text-to-speech), or text priced per character,
+  // has no per-token text pair either.
+  const perToken = (unit: string | undefined) => unit === undefined || unit === "token";
+  if (output === undefined || !perToken(input?.unit) || !perToken(output.unit)) return undefined;
   if (input === undefined || output === undefined) {
     throw new Error("v1 cost needs text input and output prices");
   }

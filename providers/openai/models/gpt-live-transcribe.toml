@@ -1,0 +1,9 @@
+# Sources:
+# https://developers.openai.com/api/docs/models/gpt-live-transcribe
+# https://developers.openai.com/api/docs/pricing
+schema = 2
+base_model = "openai/gpt-live-transcribe"
+
+[cost.audio.input]
+unit = "minute"
+price = 0.017

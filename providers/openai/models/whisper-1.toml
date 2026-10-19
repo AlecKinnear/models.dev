@@ -1,0 +1,11 @@
+# Sources:
+# https://developers.openai.com/api/docs/models/whisper-1
+# https://developers.openai.com/api/docs/pricing
+# https://developers.openai.com/api/docs/deprecations
+schema = 2
+base_model = "openai/whisper-1"
+status = "deprecated"
+
+[cost.audio.input]
+unit = "minute"
+price = 0.006
