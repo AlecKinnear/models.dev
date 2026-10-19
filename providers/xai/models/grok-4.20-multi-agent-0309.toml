@@ -8,6 +8,9 @@
 # Responses API only: Chat Completions rejects multi-agent requests, so stream_usage doesn't apply.
 # Client-side function tools need beta access ("Client-side tools for multi-agent models require
 # beta access", live API 2026-10-19), so tools stay off for general access.
+# Mid-conversation: system/developer messages are accepted in any order (docs.x.ai/developers/models);
+# changing reasoning effort or tools between turns drops the prompt cache, and there is no per-turn
+# mechanism (configuration_update/additional_tools return 422), checked live 2026-10-19.
 schema = 2
 name = "Grok 4.20 Multi-Agent"
 description = "Grok model for agentic tool use, reasoning, coding, and live assistance"
@@ -27,6 +30,7 @@ temperature = true
 top_p = true
 top_k = true
 system_updates = true
+effort_updates = false
 store = true
 prompt_cache_key = true
 cache = { supported = true, implicit = true, explicit = false }
